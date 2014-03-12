@@ -1,0 +1,71 @@
+html{
+	font-family: sans-serif;
+	margin-left: 15px;
+}
+
+.row{
+	background-color: blue;
+	color: white;
+	font-size: 25px;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+div *{
+	display: inline-block;
+
+}
+
+h2{
+	background-color: lightgreen;
+	border-radius: 10px;
+}
+
+h1{
+	text-decoration: underline;
+	font-size: 40px;
+	margin-top: 10px;
+	background-color: yellow;
+	width: 187px;
+}
+
+h5{
+	background-color: pink;
+	text-decoration: underline;
+}
+
+.button{
+	background-color: red;
+	border-radius: 10px;
+}
+
+.search_bar{
+	background-color: black;
+	float: right;
+	border-radius: 10px;
+}
+
+#messages{
+	background-color: lightblue;
+}
+
+.commentary{
+	background-color: lightblue;
+}
+
+#status{
+	background-color: lightblue;
+}
+
+.single_comment{
+	display: block;
+	border: 1px solid black;
+}
+
+#quote_green{
+	display: inline-block;
+}
+
+#wall_green{
+	display: inline-block;
+}
