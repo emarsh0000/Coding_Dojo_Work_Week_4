@@ -4,7 +4,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'root'); //set DB_PASS as 'root' if you're using mac
-define('DB_DATABASE', 'dream'); //make sure to set your database
+define('DB_DATABASE', 'expense'); //make sure to set your database
 
 
 //connect to database host
@@ -16,7 +16,7 @@ if ($connection->connect_errno)
     die("Failed to connect to MySQL: (" . $connection->connect_errno . ") " . $connection->connect_error);
 }
 
-//used when expecting multiple results (an array of arrays)
+//used when expecting multiple results
 function fetch_all($query)
 {
 	$data = array();
@@ -30,7 +30,7 @@ function fetch_all($query)
 	return $data;
 }
 
-//use when expecting a single result (one array)
+//use when expecting a single result
 function fetch_record($query)
 {
 	global $connection;
@@ -43,13 +43,13 @@ function run_mysql_query($query)
 {
 	global $connection;
  	$result = $connection->query($query);
- 	return $connection->insert_id;
 }
 
 function escape_this_string($string)
 {
 	global $connection;
-	return $connection->real_escape_string($string);
+	$esc_string = $connection->real_escape_string($string);
+	return $esc_string;
 }
 
 ?>
